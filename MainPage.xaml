@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JogoAdicaoMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Border 
+                StrokeShape="RoundRectangle 10,10,10,10"
+                BackgroundColor="DarkBlue"
+                WidthRequest="230"
+                Padding="30">
+
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label
+    Text="SCORE"
+    TextColor="White"
+    FontSize="30"
+    FontAttributes="Bold"
+    HorizontalTextAlignment="Center"/>
+                    <Label
+                        x:Name="ScoreLb"
+    Text="000"
+    TextColor="White"
+                        BackgroundColor="Black"
+    FontSize="25"
+    MaximumWidthRequest="150"
+    HorizontalTextAlignment="Center"/>
+                    <Label 
+                        Text="JOGO DA ADIÇÃO"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        Padding="0,10,0,0"
+                        />
+                </VerticalStackLayout>
+
+            </Border>
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Button
+                x:Name="JogarBtn"
+                Text="Testar o meu conhecimento" 
+                HorizontalOptions="Center"
+                MinimumWidthRequest="150"
+                Clicked="JogarBtn_Clicked"/>
+            <Button
+                x:Name="ZerarBtn"
+                Text="Zerar o Score" 
+                HorizontalOptions="Center"
+                MinimumWidthRequest="150"
+                Clicked="ZerarBtn_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
